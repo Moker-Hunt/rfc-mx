@@ -348,6 +348,10 @@ footer {
     min-width: 200px;
 }
 
+.footer-section a{
+    color: var(--accent-color);
+}
+
 .footer-section h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
