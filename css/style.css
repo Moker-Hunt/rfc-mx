@@ -354,6 +354,8 @@ footer {
 /* Dual content section */
 .dual-content {
     padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .content-grid {
@@ -670,8 +672,7 @@ textarea {
 }
 
 .text-content p {
-    padding: 1rem 1.5rem 0.5rem;    
-    line-height: 2.5vw;
+    padding: 1rem 1.5rem 0.5rem;
 }
 
 .image-container {
@@ -1053,6 +1054,7 @@ span {
 
 /* Стили для таблиц */
 .finance-table {
+    overflow-x: auto;
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
@@ -1885,19 +1887,9 @@ span {
 
 .tramites-section ol li {
     position: relative;
-    padding-left: 2rem;
     margin-bottom: 1.2rem;
     counter-increment: item;
     line-height: 1.6;
-}
-
-.tramites-section ol li::before {
-    content: counter(item) ".";
-    color: var(--accent-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 
 .tramites-section ol li:hover {
