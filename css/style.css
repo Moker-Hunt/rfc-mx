@@ -78,6 +78,11 @@ body {
     background-color: var(--primary-color);
 }
 
+.index-body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-attachment: fixed;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bitter', serif; /* Font for headings */
     margin-bottom: 1rem;
