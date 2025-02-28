@@ -415,12 +415,21 @@ footer {
     gap: 1rem;
 }
 
+.cookie-consent a {
+    color: var(--secondary-color);
+    padding: 0.3rem 1rem;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
 #acceptCookies {
     background-color: var(--cta-color);
+    color: var(--dark-color);
 }
 
 #acceptCookies:hover {
     background-color: var(--highlight-color);
+    color: var(--light-color)
 }
 
 .cookie-more {

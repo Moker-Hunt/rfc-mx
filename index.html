@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RFC en México: ¿Qué es y para qué sirve? - Información Oficial</title>
     <meta name="description" content="Información completa sobre el RFC en México: qué es, para qué sirve y cómo obtenerlo.">
+    <meta name="keywords" content="rfc">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/awesome.css">
     <link rel="icon" type="image/avif" sizes="32x32" href="logo/favicon-32x32.avif">
@@ -32,7 +33,7 @@
     </header>
 
     <main>
-        <section class="hero" style="background-image: linear-gradient(rgba(45, 30, 64, 0.8), rgba(26, 31, 113, 0.9)), url('img/hero-rfc-mexico.webp'); background-size: cover; background-position: center; padding: 100px 0;">
+        <section class="hero" style="background-image: linear-gradient(rgba(45, 30, 64, 0.8), rgba(26, 31, 113, 0.9)), url('img/hero-rfc-mexico.webp'); background-size: cover; background-position: center; padding: 100px 0;" lazy-loading>
             <div class="container">
                 <h1>RFC en México: ¿Qué es y para qué sirve?</h1>
                 <p>Todo lo que necesitas saber sobre el Registro Federal de Contribuyentes en México.</p>
@@ -51,7 +52,7 @@
                             
                             <p>El RFC es fundamental en la vida económica de cualquier mexicano, ya que es necesario para realizar diversos trámites como:</p>
                         </div>
-                        <img src="img/rfc-documento.webp" alt="Documento RFC" width="300" height="250" style="border-radius: 8px; box-shadow: var(--shadow); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <img lazy-loading src="img/rfc-documento.webp" alt="Documento RFC" width="300" height="250" style="border-radius: 8px; box-shadow: var(--shadow); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                     
                     <ul class="benefits-list">
@@ -66,7 +67,7 @@
                     <h3 class="subsection-title">Estructura del RFC</h3>
                     
                     <div class="image-showcase">
-                        <img src="img/estructura-rfc.webp" alt="Estructura del RFC" width="600" height="200" style="border-radius: 8px; margin-bottom: 20px; box-shadow: var(--shadow);">
+                        <img lazy-loading src="img/estructura-rfc.webp" alt="Estructura del RFC" width="600" height="200" style="border-radius: 8px; margin-bottom: 20px; box-shadow: var(--shadow);">
                         <p class="image-caption"><em>Ejemplo de la estructura de un RFC para persona física</em></p>
                     </div>
                     
@@ -132,7 +133,7 @@
                         </ul>
                     </div>
                     <div class="image-container">
-                        <img src="img/rfc-sin-empleo.webp" alt="RFC sin empleo formal" class="feature-image" style="width: 350px; height: 300px;">
+                        <img lazy-loading src="img/rfc-sin-empleo.webp" alt="RFC sin empleo formal" class="feature-image" style="width: 350px; height: 300px;">
                     </div>
                 </div>
                 
@@ -156,7 +157,7 @@
                         </div>
                         <h3 class="card-title">Errores comunes al registrar tu RFC y cómo evitarlos</h3>
                         <div class="card-image">
-                            <img src="img/errores-rfc.webp" alt="Errores comunes en RFC" loading="lazy">
+                            <img lazy-loading src="img/errores-rfc.webp" alt="Errores comunes en RFC" loading="lazy">
                         </div>
                         <div class="card-content">
                             <p>Al momento de tramitar tu RFC, es común cometer algunos errores que pueden causarte problemas en el futuro. Estos son los más frecuentes y cómo evitarlos:</p>
@@ -203,7 +204,7 @@
                             <p class="highlight-text">A diferencia de otros documentos, el RFC no tiene fecha de vencimiento, por lo que no necesita renovación. Sin embargo, hay situaciones en las que deberás actualizarlo:</p>
                             
                             <div class="card-image centered">
-                                <img src="img/actualizar-rfc.webp" alt="Actualización de RFC" loading="lazy">
+                                <img lazy-loading src="img/actualizar-rfc.webp" alt="Actualización de RFC" loading="lazy">
                             </div>
                             
                             <h4 class="mini-title">Situaciones que requieren actualización:</h4>
@@ -244,7 +245,7 @@
                             </ol>
                             
                             <div class="card-image centered">
-                                <img src="img/recuperar-rfc.webp" alt="Recuperar RFC" loading="lazy">
+                                <img lazy-loading src="img/recuperar-rfc.webp" alt="Recuperar RFC" loading="lazy">
                             </div>
                             
                             <p>Si ninguna de estas opciones funciona, puedes solicitar una cita en las oficinas del SAT para obtener una constancia de situación fiscal que incluye tu RFC.</p>
@@ -256,7 +257,7 @@
                         </div>
                         <h3 class="card-title">RFC para extranjeros en México</h3>
                         <div class="card-image">
-                            <img src="img/rfc-extranjeros.webp" alt="RFC para extranjeros" loading="lazy">
+                            <img lazy-loading src="img/rfc-extranjeros.webp" alt="RFC para extranjeros" loading="lazy">
                         </div>
                         <div class="card-content">
                             <p>Los extranjeros que realizan actividades económicas en México también necesitan obtener un RFC. El proceso es similar al de los ciudadanos mexicanos, con algunas particularidades:</p>
@@ -304,6 +305,6 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
