@@ -199,6 +199,19 @@ nav ul li a:hover {
 }
 
 /* Hero section */
+#first-hero {
+    background-image: linear-gradient(rgba(45, 30, 64, 0.8), rgba(26, 31, 113, 0.9)), url('../img/hero-rfc-mexico.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+@media (max-width: 500px) {
+    #first-hero {
+        background-image: linear-gradient(rgba(45, 30, 64, 0.8), rgba(26, 31, 113, 0.9)), url('../img/hero-rfc-mexico-mobile.webp');
+    }
+}
+
 .hero {
     background-color: var(--secondary-color);
     padding: 3rem 0;
