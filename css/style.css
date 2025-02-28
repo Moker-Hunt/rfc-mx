@@ -1,0 +1,1980 @@
+/* Importación de fuentes */
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand-v31-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand-v31-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/bitter-v36-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/bitter-v36-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-display: swap; 
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v24-latin-700.woff2') format('woff2');
+  }
+  
+
+/* Estilos generales */
+:root {
+    --primary-color: #2D1E40;
+    --secondary-color: #1A1F71; 
+    --accent-color: #F4E04D; 
+    --cta-color: #FF6F61; 
+    --link-color: #007BFF;
+    --highlight-color: #20C997; 
+    --text-color: #FFFFFF;
+    --text-dark: #333333; 
+    --light-color: #f8f8f8;
+    --dark-color: #222;
+    --border-color: #3D2E50;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Font for regular text */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bitter', serif; /* Font for headings */
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button, .btn {
+    display: inline-block;
+    background-color: var(--cta-color);
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Quicksand', sans-serif; /* Font for buttons and navigation */
+    font-weight: bold;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--highlight-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.logo a {
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    font-family: 'Quicksand', sans-serif; /* Font for navigation */
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mobile menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--secondary-color);
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Main content sections */
+.main-content, .secondary-content {
+    padding: 3rem 0;
+}
+
+.secondary-content {
+    background-color: var(--secondary-color);
+}
+
+.alt-bg {
+    background-color: var(--primary-color);
+}
+
+/* Cards and grids */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.alt-bg .info-card {
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h4 {
+    color: var(--highlight-color);
+    margin-bottom: 0.8rem;
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    background-color: var(--primary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(26, 31, 113, 0.1);
+}
+
+/* Alert boxes */
+.alert-box {
+    background-color: rgba(255, 111, 97, 0.1);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.alert-box i {
+    color: var(--cta-color);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.alert-box h4 {
+    color: var(--cta-color);
+    margin: 0 0 0.5rem;
+}
+
+.alert-box p {
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.footer-section ul li {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Dual content section */
+.dual-content {
+    padding: 3rem 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .dual-content .container .content-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.content-item {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.alt-bg .content-item {
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Cookie consent */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-consent p {
+    margin-bottom: 1rem;
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#acceptCookies {
+    background-color: var(--cta-color);
+}
+
+#acceptCookies:hover {
+    background-color: var(--highlight-color);
+}
+
+.cookie-more {
+    color: var(--link-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        box-shadow: var(--shadow);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .header-content {
+        position: relative;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: rgba(248, 248, 248, 0.1);
+    color: var(--accent-color);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-button {
+    background-color: var(--cta-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.form-button:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Стили для внутренних элементов страниц */
+.section-title {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.benefits-list li {
+    padding: 0.8rem 1rem;
+    background-color: rgba(244, 224, 77, 0.1);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-list i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.subsection-title {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin: 2rem 0 1.2rem;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.image-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.image-caption {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}    
+
+.card-body p {
+    color: var(--primary-color);
+}
+
+.card-body ul {
+    padding-left: 1.5rem;
+}
+
+.card-body li {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.note {
+    background-color: rgba(32, 201, 151, 0.1);
+    border-left: 4px solid var(--highlight-color);
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.note i {
+    color: var(--highlight-color);
+    margin-right: 0.5rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-divider {
+    height: 3px;
+    width: 80px;
+    background-color: var(--accent-color);
+    margin: 1rem auto 0;
+}
+
+.content-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.text-content {
+    flex: 1;
+    background-color: var(--secondary-color);
+}
+
+.text-content p {
+    padding: 1rem 1.5rem 0.5rem;    
+    line-height: 2.5vw;
+}
+
+.image-container {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.feature-image {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.feature-image:hover {
+    transform: scale(1.03);
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.feature-list li {
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.feature-list i {
+    color: var(--accent-color);
+    margin-top: 0.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-flex {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Checklist */
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.checklist li {
+    display: flex;
+    margin-bottom: 1.2rem;
+    gap: 1rem;
+    background-color: rgba(26, 31, 113, 0.3);
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.check-icon {
+    flex-shrink: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.checklist li div p {
+    margin: 0.3rem 0 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Icon list */
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.5rem;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.7rem 0.5rem;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(244, 224, 77, 0.1);
+    transition: var(--transition);
+}
+
+.icon-list li:hover {
+    background-color: rgba(26, 31, 113, 0.3);
+    padding-left: 1rem;
+}
+
+.icon-list i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+span {
+    color: var(--accent-color);
+}
+
+/* Content Cards */
+.content-card {
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.card-title {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1.5rem 1.5rem;
+    margin: 0;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+    border-radius: 4px;
+}
+
+.card-image.centered {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+}
+
+.card-image.centered img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.content-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.card-content a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.card-content a:hover {
+    color: var(--highlight-color);
+}
+
+.card-content strong {
+    color: var(--accent-color);
+}
+
+.card-content ol li, .card-content ul li {
+    margin-bottom: 0.8rem;
+}
+
+/* Responsive adjustments for content cards */
+@media (max-width: 768px) {
+    .content-card {
+        margin-bottom: 2rem;
+    }
+    
+    .card-icon {
+        top: -10px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Text styles */
+.highlight-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+}
+
+.mini-title {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+    position: relative;
+}
+
+/* Tip box */
+.tip-box {
+    background-color: rgba(32, 201, 151, 0.3);
+    border-radius: 8px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--highlight-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip-box i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.tip-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Стили для страницы administrar-dinero.html */
+.finance-section {
+    padding: 3rem 0;
+    position: relative;
+}
+
+.finance-section h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.finance-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--highlight-color);
+}
+
+.finance-section h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Стили для гибкого контейнера с изображением и текстом */
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-container .text-content {
+    flex: 1;
+}
+
+.flex-container .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.flex-container .image-content img:hover {
+    transform: scale(1.03);
+}
+
+/* Стили для списков */
+.finance-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.finance-list li {
+    position: relative;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    margin-bottom: 0.8rem;
+    background-color: rgba(26, 31, 113, 0.3);
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.finance-list li:hover {
+    background-color: rgba(26, 31, 113, 0.5);
+    transform: translateX(5px);
+}
+
+.finance-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0.8rem;
+    color: var(--accent-color);
+}
+
+.finance-list li strong {
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Стили для таблиц */
+.finance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.finance-table th {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.finance-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(244, 224, 77, 0.1);
+    color: var(--text-color);
+}
+
+.finance-table tr:hover {
+    background-color: rgba(26, 31, 113, 0.3);
+}
+
+/* Карточки с советами */
+.tip-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-color);
+}
+
+.tip-card h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.tip-card h4 i {
+    color: var(--highlight-color);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .flex-container, .flex-container.reverse {
+        flex-direction: column;
+    }
+    
+    .finance-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Стили для финансовых секций */
+.finance-section {
+    padding: 60px 0;
+    position: relative;
+}
+
+.finance-section.bg-light {
+    background-color: var(--light-bg);
+}
+
+.finance-section h2 {
+    margin-bottom: 30px;
+    color: var(--primary);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.finance-section h3 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Flex контейнеры */
+.flex-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-container .text-content {
+    flex: 1;
+}
+
+.flex-container .image-content {
+    flex: 0 0 40%;
+}
+
+.flex-container .image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Стилизованные списки */
+.finance-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.finance-list li {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.finance-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.finance-list li strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.finance-list.compact li {
+    padding: 8px 15px;
+    margin-bottom: 8px;
+}
+
+/* Карточки с советами */
+.tip-card {
+    background-color: var(--dark-color);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 30px 0;
+    box-shadow: var(--shadow);
+}
+
+.tip-card h4 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.tip-card h4 i {
+    margin-right: 10px;
+}
+
+.tip-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Таблицы */
+.finance-table {
+    margin: 25px 0;
+    overflow-x: auto;
+}
+
+.finance-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.finance-table th {
+    background-color: var(--primary);
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.finance-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.finance-table tr:last-child td {
+    border-bottom: none;
+}
+
+.finance-table tr:nth-child(even) {
+    background-color: var(--dark-color);
+}
+
+.finance-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.finance-table tr:hover td, .finance-table tr:hover th {
+    color: var(--dark-color)
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .flex-container.reverse {
+        flex-direction: column;
+    }
+    
+    .flex-container .image-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .finance-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .finance-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Стили для страницы encontrar-empleo.html */
+.empleo-section {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.empleo-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent-color), var(--highlight-color));
+}
+
+.empleo-section h2 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.empleo-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--highlight-color);
+}
+
+.empleo-section h3 {
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    margin: 1.8rem 0 1rem;
+    border-left: 4px solid var(--highlight-color);
+    padding-left: 1rem;
+}
+
+.empleo-section p {
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+}
+
+.empleo-section strong {
+    color: var(--accent-color);
+}
+
+.empleo-flex-container {
+    display: flex;
+    gap: 2.5rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.empleo-flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.empleo-text-content {
+    flex: 1;
+    background-color: rgba(26, 31, 113, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empleo-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empleo-image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empleo-image-content img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для списков */
+.empleo-section ol {
+    counter-reset: item;
+    padding-left: 0;
+    margin: 1.5rem 0;
+}
+
+.empleo-section ol > li {
+    counter-increment: item;
+    margin-bottom: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+.empleo-section ol > li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--accent-color);
+    color: white;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.empleo-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.2rem 0;
+}
+
+.empleo-section ul > li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.empleo-section ul > li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--highlight-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.empleo-section ul ul > li::before {
+    content: '◦';
+}
+
+/* Стили для таблиц */
+.empleo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.empleo-table th {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.empleo-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(244, 224, 77, 0.1);
+    color: var(--text-color);
+}
+
+.empleo-table tr:nth-child(even) {
+    background-color: rgba(26, 31, 113, 0.05);
+}
+
+.empleo-table tr:hover {
+    background-color: rgba(26, 31, 113, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .empleo-flex-container, 
+    .empleo-flex-container.reverse {
+        flex-direction: column;
+    }
+    
+    .empleo-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .empleo-section h3 {
+        font-size: 1.4rem;
+    }
+    
+    .empleo-section ol > li {
+        padding-left: 2rem;
+    }
+    
+    .empleo-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Стили для страницы problemas-juridicos.html */
+.juridico-section {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.juridico-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+.juridico-section h2 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.juridico-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #6a11cb;
+}
+
+.juridico-section h3 {
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    margin: 1.8rem 0 1rem;
+    border-left: 4px solid #2575fc;
+    padding-left: 1rem;
+}
+
+.juridico-section h4 {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.juridico-section p {
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+}
+
+.juridico-section strong {
+    color: var(--accent-color);
+}
+
+.juridico-flex-container {
+    display: flex;
+    gap: 2.5rem;
+    margin: 2rem 0;
+    align-items: flex-start;
+}
+
+.juridico-flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.juridico-text-content {
+    flex: 1;
+    background-color: rgba(26, 31, 113, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.juridico-text-content h3{
+    color: var(--accent-color)
+}
+
+.juridico-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juridico-image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juridico-image-content img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для списков */
+.juridico-section ol {
+    counter-reset: item;
+    padding-left: 0;
+    margin: 1.5rem 0;
+}
+
+.juridico-section ol > li {
+    counter-increment: item;
+    margin-bottom: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+    background-color: rgba(106, 17, 203, 0.05);
+    padding: 1rem 1rem 1rem 3.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.juridico-section ol > li:hover {
+    background-color: rgba(106, 17, 203, 0.1);
+    transform: translateX(5px);
+}
+
+.juridico-section ol > li::before {
+    content: counter(item);
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background-color: #6a11cb;
+    color: white;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.juridico-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.2rem 0;
+}
+
+.juridico-section ul > li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    background-color: rgba(37, 117, 252, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.juridico-section ul > li:hover {
+    background-color: rgba(37, 117, 252, 0.1);
+    transform: translateX(5px);
+}
+
+.juridico-section ul > li::before {
+    content: '•';
+    position: absolute;
+    left: 1rem;
+    top: 0.7rem;
+    color: #2575fc;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.juridico-section ul ul > li {
+    margin-top: 0.5rem;
+    background-color: transparent;
+    border-left: 2px solid rgba(37, 117, 252, 0.3);
+}
+
+.juridico-section ul ul > li::before {
+    content: '◦';
+    color: #6a11cb;
+}
+
+/* Стили для таблиц */
+.juridico-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.juridico-table th {
+    background-color: #6a11cb;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.juridico-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(106, 17, 203, 0.1);
+    color: var(--text-color);
+}
+
+.juridico-table tr:nth-child(even) {
+    background-color: rgba(37, 117, 252, 0.05);
+}
+
+.juridico-table tr:hover {
+    background-color: rgba(37, 117, 252, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .juridico-flex-container, 
+    .juridico-flex-container.reverse {
+        flex-direction: column;
+    }
+    
+    .juridico-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .juridico-section h3 {
+        font-size: 1.4rem;
+    }
+    
+    .juridico-section ol > li {
+        padding-left: 3rem;
+    }
+    
+    .juridico-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Стили для страницы tramites-emprendedores.html */
+.tramites-section {
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.tramites-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.tramites-section h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--light-color);
+    position: relative;
+}
+
+.tramites-section h3 {
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    margin: 1.8rem 0 1rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.tramites-section h4 {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.tramites-section p {
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+}
+
+.tramites-section strong {
+    color: var(--accent-color);
+}
+
+.tramites-flex-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .tramites-flex-container {
+        flex-direction: column;
+    }
+}
+
+.tramites-flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .tramites-flex-container.reverse {
+        flex-direction: column;
+    }
+}
+
+.tramites-text-content {
+    flex: 2;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tramites-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tramites-image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.tramites-image-content img:hover {
+    transform: scale(1.02);
+}
+
+.tramites-section ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style-type: none;
+}
+
+.tramites-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.tramites-section ul li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+.tramites-section ul li:hover {
+    background-color: rgba(37, 117, 252, 0.05);
+    border-radius: 4px;
+}
+
+.tramites-section ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    counter-reset: item;
+    list-style-type: none;
+}
+
+.tramites-section ol li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+    counter-increment: item;
+    line-height: 1.6;
+}
+
+.tramites-section ol li::before {
+    content: counter(item) ".";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tramites-section ol li:hover {
+    background-color: rgba(106, 17, 203, 0.05);
+    border-radius: 4px;
+}
+
+.tramites-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.tramites-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tramites-card h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.tramites-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tramites-table th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.tramites-table tr:nth-child(even) {
+    background-color: rgba(37, 117, 252, 0.05);
+}
+
+.tramites-table tr:hover {
+    background-color: rgba(106, 17, 203, 0.05);
+}
+
+.tramites-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.tramites-table td:first-child {
+    font-weight: 600;
+}
+
+.tramites-alert {
+    background-color: rgba(255, 243, 205, 0.8);
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+.tramites-alert p {
+    margin: 0;
+    color: #856404;
+}
+
+.tramites-alert strong {
+    color: #856404;
+}
