@@ -144,6 +144,14 @@ header {
     z-index: 1000;
 }
 
+.logo {
+    background-image: url('../logo/logo.webp');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     margin-bottom: 0;
@@ -1044,12 +1052,14 @@ span {
     position: absolute;
     left: 0.8rem;
     color: var(--accent-color);
+    margin-right: 20px;
 }
 
 .finance-list li strong {
     color: var(--accent-color);
     display: block;
     margin-bottom: 0.3rem;
+    padding-left: 10px;
 }
 
 /* Стили для таблиц */
@@ -1191,6 +1201,10 @@ span {
     display: block;
     margin-bottom: 8px;
     font-size: 1.1rem;
+}
+
+.finance-list li ul li {
+    padding-left: 30px;
 }
 
 .finance-list.compact li {
@@ -1645,6 +1659,10 @@ span {
     justify-content: center;
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+.juridico-section ol > li::marker {
+    content: "";
 }
 
 .juridico-section ul {
